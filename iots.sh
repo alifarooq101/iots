@@ -66,156 +66,154 @@ echo "$Red \n ======================================= $Color_Off"
 
 
 # Install Bridging.....
-echo -e "$Cyan \n Install Bridging..... $Color_Off"
-sudo apt install build-essential git curl
+echo "$Cyan \n Install Bridging..... $Color_Off"
+sudo apt install build-essential git curl;
 
 # Installing Script......
-echo -e "$Cyan \n Installing Script...... $Color_Off"
-bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+echo "$Cyan \n Installing Script...... $Color_Off"
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered);
 
 # Configuring automatically Starting on Boot.......
-echo -e "$Cyan \n Configuring automatically Starting on Boot........ $Color_Off"
-sudo systemctl enable nodered.service
+echo "$Cyan \n Configuring automatically Starting on Boot........ $Color_Off"
+sudo systemctl enable nodered.service;
 
 # Starting Manually.......
-echo -e "$Cyan \n Starting Manually....... $Color_Off"
-sudo node-red-start
+echo "$Cyan \n Starting Manually....... $Color_Off"
+sudo node-red-start;
 
 # Status......
-echo -e "$Cyan \n Status...... $Color_Off"
-sudo node-red-status
+echo "$Cyan \n Status...... $Color_Off"
+sudo node-red-status;
 
 # Installing Admin........
-echo -e "$Cyan \n Installing Admin........ $Color_Off"
-sudo npm install -g node-red-admin
+echo "$Cyan \n Installing Admin........ $Color_Off"
+sudo npm install -g node-red-admin;
 
 # Generating Password......
-echo -e "$Cyan \n Generating Password...... $Color_Off"
-sudo node-red-admin hash-pw
+echo "$Cyan \n Generating Password...... $Color_Off"
+sudo node-red-admin hash-pw;
 
 # Opening Settings.....
-echo -e "$Cyan \n Opening Settings..... $Color_Off"
-sudo nano /root/.node-red/settings.js
+echo "$Cyan \n Opening Settings..... $Color_Off"
+sudo nano /root/.node-red/settings.js;
 
 # Bridging is Stopping.....
-echo -e "$Cyan \n Bridging is Stopping..... $Color_Off"
-sudo node-red-stop
+echo "$Cyan \n Bridging is Stopping..... $Color_Off"
+sudo node-red-stop;
 
 # Checking Bridging Status.....
-echo -e "$Cyan \n Checking Bridging Status..... $Color_Off"
-sudo node-red-status
+echo "$Cyan \n Checking Bridging Status..... $Color_Off"
+sudo node-red-status;
 
 # Bridging Starting......
-echo -e "$Cyan \n Bridging Starting...... $Color_Off"
-sudo node-red-start
+echo "$Cyan \n Bridging Starting...... $Color_Off"
+sudo node-red-start;
 
 # Bridging Status
-echo -e "$Green \n Bridging Status...... $Color_Off"
-sudo node-red-status
-echo -e "$Green \n Bridging has been Started...... $Color_Off"
-echo -e "$Red \n ======================================= $Color_Off"
+echo "$Green \n Bridging Status...... $Color_Off"
+sudo node-red-status;
+echo "$Green \n Bridging has been Started...... $Color_Off"
+echo "$Red \n ======================================= $Color_Off"
 
 # Installing Visualization Tool.....
-echo -e "$Cyan \n Installing Visualization Tool..... $Color_Off"
-wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
-echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list
+echo "$Cyan \n Installing Visualization Tool..... $Color_Off"
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -;
+echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee -a /etc/apt/sources.list.d/grafana.list;
 
 # Updating......
-echo -e "$Cyan \n Updating...... $Color_Off"
-sudo apt update
+echo "$Cyan \n Updating...... $Color_Off"
+sudo apt update;
 
 # Installing Visualization Tool.......
-echo -e "$Cyan \n Installing Visualization Tool....... $Color_Off"
-sudo apt install grafana
+echo "$Cyan \n Installing Visualization Tool....... $Color_Off"
+sudo apt install grafana;
 
 # Enabling Tool........
-echo -e "$Cyan \n Enabling Tool........ $Color_Off"
-sudo systemctl enable grafana-server
+echo "$Cyan \n Enabling Tool........ $Color_Off"
+sudo systemctl enable grafana-server;
 
 # Starting Tool.......
-echo -e "$Cyan \n Starting Tool....... $Color_Off"
-sudo systemctl start grafana-server
+echo "$Cyan \n Starting Tool....... $Color_Off"
+sudo systemctl start grafana-server;
 
 # Visualization Tool Has Been Installed.......
-echo -e "$Green \n Visualization Tool Has Been Installed....... $Color_Off"
-echo -e "$Red \n ======================================= $Color_Off"
+echo "$Green \n Visualization Tool Has Been Installed....... $Color_Off"
+echo "$Red \n ======================================= $Color_Off"
 
 
 
 # Installing Server............
-echo -e "$Cyan \n Installing Server............ $Color_Off"
-sudo apt install apache2
+echo "$Cyan \n Installing Server............ $Color_Off"
+sudo apt install apache2;
 
 
 # Adjusting Firewall.......
-echo -e "$Cyan \n Adjusting Firewall....... $Color_Off"
-sudo ufw app list
+echo "$Cyan \n Adjusting Firewall....... $Color_Off"
+sudo ufw app list;
 
 
 # Using Server Profile.......
-echo -e "$Cyan \n Using Server Profile....... $Color_Off"
-sudo ufw allow in "Apache"
+echo "$Cyan \n Using Server Profile....... $Color_Off"
+sudo ufw allow in "Apache";
 
 
 # Verifying Changings.......
-echo -e "$Cyan \n Verifying Changings....... $Color_Off"
-sudo ufw status
+echo "$Cyan \n Verifying Changings....... $Color_Off"
+sudo ufw status;
 
 
 # Installing Database.........
-echo -e "$Cyan \n Installing Database......... $Color_Off"
-sudo apt install mysql-server
-sudo mysql_secure_installation
+echo "$Cyan \n Installing Database......... $Color_Off"
+sudo apt install mysql-server;
+sudo mysql_secure_installation;
 
 
 
 # Login to Database.........
-echo -e "$Cyan \n Login to Database......... $Color_Off"
-sudo mysql
+echo "$Cyan \n Login to Database......... $Color_Off"
+sudo mysql;
 
 
 
 # Install and Secure phpMyAdmin..........
-echo -e "$Cyan \n Install and Secure phpMyAdmin.......... $Color_Off"
-sudo apt update
+echo "$Cyan \n Install and Secure phpMyAdmin.......... $Color_Off"
+sudo apt update;
 
 # Installing Packages............
-echo -e "$Cyan \n Installing Packages............ $Color_Off"
-sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
+echo "$Cyan \n Installing Packages............ $Color_Off"
+sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl;
 
 
 # Enable the mbstring PHP extension............
-echo -e "$Cyan \n Enable the mbstring PHP extension............ $Color_Off"
-sudo phpenmod mbstring
+echo "$Cyan \n Enable the mbstring PHP extension............ $Color_Off"
+sudo phpenmod mbstring;
 
 
 # Restarting Server..........
-echo -e "$Cyan \n Restarting Server.......... $Color_Off"
-sudo systemctl restart apache2
+echo "$Cyan \n Restarting Server.......... $Color_Off"
+sudo systemctl restart apache2;
 
 
 # Configuring Password Access...........
-echo -e "$Cyan \n Configuring Password Access........... $Color_Off"
-sudo mysql
+echo "$Cyan \n Configuring Password Access........... $Color_Off"
+sudo mysql;
 
 
 # Checking which authentication method......................
-echo -e "$Cyan \n Checking which authentication method...................... $Color_Off"
+echo "$Cyan \n Checking which authentication method...................... $Color_Off"
 SELECT user,authentication_string,plugin,host FROM mysql.user;
 
 
 # Change Auth_socket of root account to Password............
-echo -e "$Cyan \n Change Auth_socket of root account to Password............ $Color_Off"
+echo "$Cyan \n Change Auth_socket of root account to Password............ $Color_Off"
 ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '12121414';
 
 
 # Checking Again the authentication methods...............
-echo -e "$Cyan \n Checking Again the authentication methods............... $Color_Off"
+echo "$Cyan \n Checking Again the authentication methods............... $Color_Off"
 SELECT user,authentication_string,plugin,host FROM mysql.user;
 
 
 
 # Done.......
 echo -e "$Red \n Open phpmyadmin....Good Luck..... $Color_Off"
-
-
