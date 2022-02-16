@@ -12,55 +12,55 @@ Purple='\033[0;35m'       # Purple
 Cyan='\033[0;36m'         # Cyan
 
 # Update packages and Upgrade system
-echo -e "$Cyan \n Updating & Upgrading System.. $Color_Off"
-sudo apt-get update -y && sudo apt-get upgrade -y
+echo "$Cyan \n Updating & Upgrading System.. $Color_Off"
+sudo apt-get update -y && sudo apt-get upgrade -y;
 
 # Updating & Upgrading System Done
-echo -e "$Yellow \n Updating & Upgrading System Done $Color_Off"
+echo "$Yellow \n Updating & Upgrading System Done $Color_Off"
 
-echo -e "$Red \n ======================================= $Color_Off"
+echo "$Red \n ======================================= $Color_Off"
 
 
 # Installing Communication Protocol
-echo -e "$Cyan \n Installing Communication Protocol.. $Color_Off"
-sudo apt install mosquitto mosquitto-clients
+echo "$Cyan \n Installing Communication Protocol.. $Color_Off"
+sudo apt install mosquitto mosquitto-clients;
 
 
 # Communication Protocol Installed
-echo -e "$Yellow \n Communication Protocol Installed $Color_Off"
+echo "$Yellow \n Communication Protocol Installed $Color_Off"
 
 # Working on Credentials
-echo -e "$Cyan \n Working on Credentials.. $Color_Off"
-echo "techstar:smarts" > pwfile
+echo "$Cyan \n Working on Credentials.. $Color_Off"
+echo "techstar:smarts" > pwfile;
 
 # Working on File Encription
-echo -e "$Cyan \n Working on File Encription.. $Color_Off"
-mosquitto_passwd -U pwfile
+echo "$Cyan \n Working on File Encription.. $Color_Off"
+mosquitto_passwd -U pwfile;
 
 # File Encription Cont...
-echo -e "$Cyan \n File Encription Cont.. $Color_Off"
-cat pwfile
+echo "$Cyan \n File Encription Cont.. $Color_Off"
+cat pwfile;
 
 # Moving Encrypted File
-echo -e "$Cyan \n Moving Encrypted File.. $Color_Off"
-sudo mv pwfile /etc/mosquitto/
+echo "$Cyan \n Moving Encrypted File.. $Color_Off"
+sudo mv pwfile /etc/mosquitto/;
 
 # Addressing Protocol
-echo -e "$Cyan \n Addressing Protocol.. $Color_Off"
-sudo nano /etc/mosquitto/mosquitto.conf
+echo "$Cyan \n Addressing Protocol.. $Color_Off"
+sudo nano /etc/mosquitto/mosquitto.conf;
 
 # Restarting Protocol
-echo -e "$Cyan \n Restarting Protocol.. $Color_Off"
-sudo /etc/init.d/mosquitto restart
+echo "$Cyan \n Restarting Protocol.. $Color_Off"
+sudo /etc/init.d/mosquitto restart;
 
 # Protocol Restarted
-echo -e "$Yellow \n Protocol Restarted.. $Color_Off"
+echo "$Yellow \n Protocol Restarted.. $Color_Off"
 
 # Protocol Status
-echo -e "$Green \n Protocol Status $Color_Off"
-sudo service mosquitto status
+echo "$Green \n Protocol Status $Color_Off"
+sudo service mosquitto status;
 
-echo -e "$Red \n ======================================= $Color_Off"
+echo "$Red \n ======================================= $Color_Off"
 
 
 
