@@ -83,7 +83,7 @@ sudo node-red-start;
 
 # Status......
 echo "$Cyan \n Status...... $Color_Off"
-sudo node-red-status;
+sudo systemctl status nodered.service;
 
 # Installing Admin........
 echo "$Cyan \n Installing Admin........ $Color_Off"
@@ -103,7 +103,7 @@ sudo node-red-stop;
 
 # Checking Bridging Status.....
 echo "$Cyan \n Checking Bridging Status..... $Color_Off"
-sudo node-red-status;
+sudo systemctl status nodered.service;
 
 # Bridging Starting......
 echo "$Cyan \n Bridging Starting...... $Color_Off"
@@ -111,7 +111,7 @@ sudo node-red-start;
 
 # Bridging Status
 echo "$Green \n Bridging Status...... $Color_Off"
-sudo node-red-status;
+sudo systemctl status nodered.service;
 echo "$Green \n Bridging has been Started...... $Color_Off"
 echo "$Red \n ======================================= $Color_Off"
 
