@@ -179,33 +179,33 @@ echo -e "$Cyan \n Status...... $Color_Off"
 sudo systemctl status nodered.service;
 #
 # Installing Admin........
-echo -e "$Cyan \n Installing Admin........ $Color_Off"
-sudo npm install -g node-red-admin;
+# echo -e "$Cyan \n Installing Admin........ $Color_Off"
+# sudo npm install -g node-red-admin;
 #
 # Generating Password......
-echo -e "$Cyan \n Generating Password...... $Color_Off"
-sudo node-red-admin hash-pw;
+# echo -e "$Cyan \n Generating Password...... $Color_Off"
+# sudo node-red-admin hash-pw;
 #
 # Opening Settings.....
-echo -e "$Cyan \n Opening Settings..... $Color_Off"
-sudo nano /root/.node-red/settings.js;
+# echo -e "$Cyan \n Opening Settings..... $Color_Off"
+# sudo nano /root/.node-red/settings.js;
 #
 # Bridging is Stopping.....
-echo -e "$Cyan \n Bridging is Stopping..... $Color_Off"
-sudo node-red-stop;
+# echo -e "$Cyan \n Bridging is Stopping..... $Color_Off"
+# sudo node-red-stop;
 #
 # Checking Bridging Status.....
-echo -e "$Cyan \n Checking Bridging Status..... $Color_Off"
-sudo systemctl status nodered.service;
+# echo -e "$Cyan \n Checking Bridging Status..... $Color_Off"
+# sudo systemctl status nodered.service;
 #
 # Bridging Starting......
-echo -e "$Cyan \n Bridging Starting...... $Color_Off"
-sudo node-red-start;
+# echo -e "$Cyan \n Bridging Starting...... $Color_Off"
+# sudo node-red-start;
 #
 # Bridging Status
-echo -e "$Green \n Bridging Status...... $Color_Off"
-sudo systemctl status nodered.service;
+# echo -e "$Green \n Bridging Status...... $Color_Off"
+# sudo systemctl status nodered.service;
 echo -e "$Green \n Bridging has been Started...... $Color_Off"
 echo -e "$Red \n ======================================= $Color_Off"
 # Done.......
-echo -e "$Red \n Open phpmyadmin....Good Luck..... $Color_Off"
+# echo -e "$Red \n Open phpmyadmin....Good Luck..... $Color_Off"
